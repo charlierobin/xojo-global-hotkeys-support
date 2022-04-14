@@ -7,8 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB217ECE2808787B008ABB6A /* libglobal-hotkeys-shim-for-xojo.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = CBC91048280874EF00BC2D46 /* libglobal-hotkeys-shim-for-xojo.dylib */; };
 		CBC910512808752B00BC2D46 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CBC910502808752B00BC2D46 /* main.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB217ECD28087853008ABB6A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(PROJECT_DIR)/../dylib";
+			dstSubfolderSpec = 0;
+			files = (
+				CB217ECE2808787B008ABB6A /* libglobal-hotkeys-shim-for-xojo.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CBC91048280874EF00BC2D46 /* libglobal-hotkeys-shim-for-xojo.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libglobal-hotkeys-shim-for-xojo.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +76,8 @@
 				CBC91044280874EF00BC2D46 /* Headers */,
 				CBC91045280874EF00BC2D46 /* Sources */,
 				CBC91046280874EF00BC2D46 /* Frameworks */,
+				CB217ECD28087853008ABB6A /* CopyFiles */,
+				CB217ED028087925008ABB6A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -102,6 +118,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB217ED028087925008ABB6A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nditto -c -k --sequesterRsrc \"$PROJECT_DIR/../dylib/libglobal-hotkeys-shim-for-xojo.dylib\" \"$PROJECT_DIR/../dylib/libglobal-hotkeys-shim-for-xojo.dylib.zip\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBC91045280874EF00BC2D46 /* Sources */ = {
