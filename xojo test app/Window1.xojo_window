@@ -182,7 +182,7 @@ End
 #tag Events PushButtonRegPlus
 	#tag Event
 		Sub Action()
-		  var ptrTo_hk_1 as Ptr = GlobalHotKeys.registerHotKey( 1, "hk_1", 24, true, true, false, false )
+		  var ptrTo_hk_1 as Ptr = GlobalHotKeys.registerHotKey( 1, "hk_1", 24, GlobalHotKeys.CommandKey.Yes, GlobalHotKeys.OptionKey.Yes, GlobalHotKeys.ControlKey.No, GlobalHotKeys.ShiftKey.No )
 		  
 		  App.addHotKeyData( 1, new Dictionary( "name" : "plus key", "ref" : ptrTo_hk_1 ) )
 		  

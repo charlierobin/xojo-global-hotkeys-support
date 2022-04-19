@@ -1,7 +1,7 @@
 #tag Module
 Protected Module GlobalHotKeys
 	#tag ExternalMethod, Flags = &h1
-		Protected Declare Function registerHotKey Lib dylib (id as Integer, signature as OSType, keyCode as Integer, withCmdKey as Boolean, withOptionKey as Boolean, withControlKey as Boolean, withShiftKey as Boolean) As Ptr
+		Protected Declare Function registerHotKey Lib dylib (id as Integer, signature as OSType, keyCode as Integer, withCmdKey as CommandKey, withOptionKey as OptionKey, withControlKey as ControlKey, withShiftKey as ShiftKey) As Ptr
 	#tag EndExternalMethod
 
 	#tag ExternalMethod, Flags = &h1
@@ -15,6 +15,27 @@ Protected Module GlobalHotKeys
 
 	#tag Constant, Name = dylib, Type = String, Dynamic = False, Default = \"@executable_path/../Frameworks/libglobal-hotkeys-shim-for-xojo.dylib", Scope = Private
 	#tag EndConstant
+
+
+	#tag Enum, Name = CommandKey, Type = Integer, Flags = &h1
+		No
+		Yes
+	#tag EndEnum
+
+	#tag Enum, Name = ControlKey, Type = Integer, Flags = &h1
+		No
+		Yes
+	#tag EndEnum
+
+	#tag Enum, Name = OptionKey, Type = Integer, Flags = &h1
+		No
+		Yes
+	#tag EndEnum
+
+	#tag Enum, Name = ShiftKey, Type = Integer, Flags = &h1
+		No
+		Yes
+	#tag EndEnum
 
 
 	#tag ViewBehavior

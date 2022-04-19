@@ -9,12 +9,12 @@ Inherits Application
 		    
 		    GlobalHotKeys.setCallback( AddressOf callback_Handler )
 		    
-		    var ptrTo_hk_1 as Ptr = GlobalHotKeys.registerHotKey( 1, "hk_1", 24, true, true, false, false )
+		    var ptrTo_hk_1 as Ptr = GlobalHotKeys.registerHotKey( 1, "hk_1", 24, GlobalHotKeys.CommandKey.Yes, GlobalHotKeys.OptionKey.Yes, GlobalHotKeys.ControlKey.No, GlobalHotKeys.ShiftKey.No )
 		    
 		    me.addHotKeyData( 1, new Dictionary( "name" : "plus key", "ref" : ptrTo_hk_1 ) )
 		    
 		    
-		    var ptrTo_hk_2 as Ptr = GlobalHotKeys.registerHotKey( 2, "hk_2", 27, true, true, false, false )
+		    var ptrTo_hk_2 as Ptr = GlobalHotKeys.registerHotKey( 2, "hk_2", 27, GlobalHotKeys.CommandKey.Yes, GlobalHotKeys.OptionKey.Yes, GlobalHotKeys.ControlKey.No, GlobalHotKeys.ShiftKey.No )
 		    
 		    me.addHotKeyData( 2, new Dictionary( "name" : "minus key", "ref" : ptrTo_hk_2 ) )
 		    
