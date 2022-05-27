@@ -1,9 +1,5 @@
 .DS_Store
 
-DerivedData*
-
-dylib/libglobal-hotkeys-shim-for-xojo.dylib
-
 Builds*
 *.debug
 *.debug.app
